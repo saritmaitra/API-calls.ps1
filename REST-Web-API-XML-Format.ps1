@@ -1,3 +1,4 @@
+# Invoke-RestMethod and Invoke-WebRequest cmdlets to make HTTP/REST calls
 # We will call financial time-series data using Quandl API 
 # https://www.quandl.com/data/CHRIS/MCX_NG1-Natural-Gas-Futures-Continuous-Contract-1-NG1-Front-Month
 
