@@ -3,6 +3,7 @@
 
 $url = https://www.quandl.com/api/v3/datasets/CHRIS/MCX_NG1.xml?api_key=my key
 $web = Invoke-WebRequest -uri $url
+$rest = Invoke-RestMethod -uri $url
 
 $web # call status
 $web.content
@@ -11,9 +12,9 @@ $content = $web.content
 $content
 
 #$content.nutcstatus returns nothing. Because the result is a XML file we can tell Powershell that we are working with XML by putting before our variable.
-$content.nutcstatus
+$content.datasetstatus
 [xml]$xml = $content
-$xml.nutcstatus
+$xml.datasetstatus
 
 # Now we have all the data in the Powershell pipeline. 
 # However, Invoke-Restmethod returns the resulting XML back as a powershell object natively.
