@@ -25,3 +25,12 @@ $xml.datasetstatus
 # However, Invoke-Restmethod returns the resulting XML back as a powershell object natively.
 
 # Invoke-RestMethod is much better at dealing with XML and JSON results, while Invoke-WebRequest is better at dealing with straight HTML results. 
+
+# SIMPLIFIED
+$API_key = "$secret"
+$url = "https://api.forecast.io/forecast/$API_key/$coords"
+#Store the results in $weather
+$data = Invoke-RestMethod $url -Method Get
+ 
+#Display the contents of $weather
+$data
