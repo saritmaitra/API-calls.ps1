@@ -6,6 +6,10 @@ $url = https://www.quandl.com/api/v3/datasets/CHRIS/MCX_NG1.xml?api_key=my key
 $web = Invoke-WebRequest -uri $url
 $rest = Invoke-RestMethod -uri $url
 
+# Invoke-RestMethod differs from Invoke-WebRequest by its passing ability. 
+# Invoke-RestMethod natively understands the output a REST API method returns, which is typically JSON. 
+# When the API does return JSON, Invoke-RestMethod will parse the JSON and return useful PowerShell objects. 
+
 $web # call status
 $web.content
 
