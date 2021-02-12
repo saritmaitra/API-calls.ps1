@@ -18,3 +18,4 @@ $item
 
 #option 2 for display/utilization
 $response | ConvertTo-Json #-Depth 4
+$response | ConvertTo-Json -Depth 4
